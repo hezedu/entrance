@@ -18,6 +18,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "request": "^2.88.0",
+    "virgin": "^1.1.0",
     "ws": "^7.0.1"
   },
   "devDependencies": {
