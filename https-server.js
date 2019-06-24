@@ -27,7 +27,7 @@ const server = https.createServer(sslOpts, app);
 server.on('upgrade', function upgrade(req, socket, head) {
   let domain = getDomain(req.headers.host, portSuffix);
   domain = domains.get(domain);
-  if (domain) {
+  if (domain && domain.wsTo) {
     wsProxy(req, socket, head, domain.wsTo);
   } else {
     socket.destroy();

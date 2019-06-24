@@ -5,19 +5,26 @@ const domains = new Map([
     type: 'proxy',
     to: 'http://192.168.56.101:3001',
     wsTo: 'ws://192.168.56.101:3001'
-  }], 
+  }],
   ["linux-remote.org", {
     type: 'proxy',
-    to: '127.0.0.1:4000'
+    to: 'http://127.0.0.1:3005'
   }],
-  ["demo.linux-remote.org", true], 
-  ["register.linux-remote.org", true]
+  ["demo.linux-remote.org", {
+    type: 'proxy',
+    to: 'http://127.0.0.1:3001',
+    wsTo: 'ws://127.0.0.1:3001'
+  }], 
+  ["register.linux-remote.org", {
+    type: 'proxy',
+    to: 'http://127.0.0.1:3000'
+  }]
 ]);
 const conf = {
-  403: {
-    ssl: true,
-    sslOpts: {},
-  },
+  // 403: {
+  //   ssl: true,
+  //   sslOpts: {},
+  // },
   domains,
 
   sslOpts: {
