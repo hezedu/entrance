@@ -35,5 +35,5 @@ server.on('upgrade', function upgrade(req, socket, head) {
 });
 
 server.listen(port, function(){
-  // _console.log('Https server listen on', port);
+  console.info('Https server listen on', port);
 });
