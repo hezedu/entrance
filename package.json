@@ -1,0 +1,27 @@
+{
+  "name": "@hezedu/entrance",
+  "version": "0.0.1",
+  "author": {
+    "name": "Du Wei",
+    "email": "hezedu@hotmail.com"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hezedu/entrance.git"
+  },
+  "scripts": {
+    "start": "nodemon --ignore test/ -e js -L index.js",
+    "_devInstall": "cnpm i --by=npm --no-bin-links",
+    "linuxIpty": "npm install node-pty --save --no-bin-links"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "request": "^2.88.0",
+    "ws": "^7.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^5.15.3"
+  }
+}
