@@ -13,6 +13,7 @@
   "scripts": {
     "start": "nodemon --ignore test/ -e js -L index.js",
     "_devInstall": "cnpm i --by=npm --no-bin-links",
+    "proInstall": "npm install --production",
     "linuxIpty": "npm install node-pty --save --no-bin-links"
   },
   "dependencies": {

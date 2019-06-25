@@ -1,10 +1,12 @@
-const { noop } = require('./lib/util');
 const virgin = require('virgin');
-virgin.letsencryptGenCert = noop;
+
+const letsencryptGenCert = require('./mid/letsencrypt-gen-cert');
+
+virgin.letsencryptGenCert = letsencryptGenCert;
 
 
 require('./lib/http-server');
 require('./lib/https-server');
-require('./lib/control');
+// require('./lib/control');
 
 // _console.log('index');
